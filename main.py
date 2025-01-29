@@ -134,7 +134,7 @@ def download() -> None:
    downloadPath = path.get()
    downloadType = mediaType.get()
 
-   getVideo = YouTube( inputLink )
+   getVideo = YouTube( inputLink, 'WEB' )
 
    videoStream = getVideo.streams.get_highest_resolution()
    outFile = videoStream.download( downloadPath )
